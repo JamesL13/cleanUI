@@ -1,0 +1,231 @@
+/*
+Version: 0.01
+Created by James Landy
+Subreddit: /r/cleanUI;
+*/
+
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: white;
+	min-width: 820px;
+}
+
+/* General Styles - Links / Buttons / Inputs */
+a {
+	color: #0000FF;
+	transition: color 0.15s ease;
+}
+
+/* Tabmenu (hot/new/top) */
+#header-bottom-left {
+	position: absolute;
+	top: 36px;
+	left: 16px;
+	text-align: center;
+}
+
+#header .tabmenu {
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	margin: 0px;
+}
+
+#header .tabmenu ul li {margin: 0px !important;}
+	#header .tabmenu li a {
+		display: block;
+		margin: 0px 7px;
+		padding: 16px 16px;
+		background-color: blue;
+		color: white;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 14px;
+		font-family: Roboto, sans-serif;
+		transition: color 0.25s ease, background-color 0.5s ease;
+	}
+
+	/* IF Headerimg is though */
+	#header .tabmenu li a {
+		color: #fff;
+	}
+
+	#header .tabmenu li a, .pagename a {
+		/*text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);*/
+	}
+
+	#header .tabmenu li a:hover {
+		background-color: #08088A;
+	}
+
+	#header .tabmenu li.selected a {
+		padding: 16px 16px 14px 16px;
+		background-color: #2EFEF7;
+		border: 0px;
+		border-bottom: 2px solid #fff;
+		color: black;
+		font-weight: bold;
+	}
+
+	#header .tabmenu li.selected a:hover {
+		background-color: #A9F5F2;
+	}
+
+	.listing-page .tabmenu li > a[href$="/rising/"], .wiki-page .tabmenu li > a[href$="/rising/"],
+	.listing-page .tabmenu li > a[href$="/controversial/"], .wiki-page .tabmenu li > a[href$="/controversial/"],
+	.listing-page .tabmenu li > a[href$="/promoted/"], .wiki-page .tabmenu li > a[href$="/promoted/"],
+	.listing-page .tabmenu li > a[href$="/gilded/"], .wiki-page .tabmenu li > a[href$="/gilded/"]
+	{
+		display:none!important;
+	}
+
+
+/* Sidebar */
+.side {
+	margin: 200px 16px 0px 0px;
+	padding: 6px 16px;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.16);
+}
+
+/* Objects from top to bottom */
+#header-bottom-right {
+	position: absolute;
+	top:0px;
+	right: 0px;
+	width: auto;
+	max-width: 300px;
+	height: 24px;
+	background-color: transparent;
+	font-size: 11px;
+	color: rgba(255,255,255,0.45);
+	padding: 5px 8px 4px 2px;
+}
+
+	body:not(.loggedin) #header-bottom-right {max-width: 340px;}
+	#header-bottom-right a {color: #fff;}
+	#header-bottom-right a:hover {text-decoration: underline;}
+
+.user .userkarma {
+	font-weight: normal;
+	color: rgba(255,255,255,0.45);
+	border: none;
+	font-size: 9px;
+	transition: all 0.15s ease;
+}
+
+.separator, .user {color: rgba(255,255,255,0.45);}
+
+
+#mail, #modmail {
+	width: 16px;
+	height: 14px;
+	background-color: yellow !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent;
+	transition: all 0.25s ease;
+}
+
+
+	#mail {
+		top: -2px;
+		overflow: visible;
+	}
+
+	#mail.nohavemail {background-position: -32px -0px;}
+
+	#mail.havemail {
+		background-position: -32px -16px;
+		opacity: 1;
+	}
+
+	.message-count {
+		background-color: #f50;
+		position: relative;
+		top: -1px;
+	}
+
+	#mail.havemail:before {
+		position: fixed;
+		padding: 16px 24px;
+		bottom: 24px;
+		z-index: 100;
+		background-color: #EA4848;
+		border-radius: 2px;
+		box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
+		color: #fff;
+		width: 300px;
+		height: 48px;
+		left: 24px;
+		content: "You have new messages!";
+		text-indent: 0px;
+		font-size: 14px;
+		font-family: arial, sans-serif;
+		line-height: 1;
+		-webkit-transform:translateY(112px);
+		transform:translateY(112px);
+		transition: background-color 0.25s ease, box-shadow 0.25s ease;
+		background-color: green;
+		background-position: 269px -32px;
+		background-repeat: no-repeat;
+	}
+
+	#mail.havemail:hover:before {
+		background-color: #ec5b5b;
+		box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.48);
+	}
+
+	#mail.havemail:active:before {
+		background-color: #c73d3d;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.76);
+	}
+
+
+	#modmail {top: -3px;}
+
+		#modmail.nohavemail {background-position: -48px -0px;}
+		#modmail.havemail {background-position: -48px -16px;opacity: 1;
+	}
+
+/* preferences & logout icons */
+	#header-bottom-right a.pref-lang, .loggedin .logout a{
+		background-position: -0px -16px;
+		background-color: purple;
+		width: 16px;
+		height: 14px;
+		display: inline-block;
+		text-indent: -9999px;
+		margin: 0px;
+		position: relative;
+		top: -1px;
+		transition: all 0.25s ease;
+	}
+
+	.loggedin .logout a {background-position: -16px -0px;}
+
+	.side:after {
+		display: block;
+		margin: 10px 0px;
+		padding: 10px 0px;
+		color: #5B92FA;
+
+	/* Please do not change or remove this line. */
+	content: "CSS Theme via /r/cleanUI";
+	/* Please do not change or remove this line. */
+
+		text-transform: none;
+		font-size: 16px;
+		font-family: arial,sans-serif;
+		position: absolute;
+		width: 300px;
+		text-align: center;
+		right: 16px;
+		}
