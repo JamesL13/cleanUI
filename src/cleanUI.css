@@ -1,5 +1,5 @@
 /*
-Version: 0.01
+Version: 0.02
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -13,7 +13,7 @@ Subreddit: /r/cleanUI;
 
 body {
 	overflow-x: hidden;
-	background-color: white;
+	background-color: #e0f7fa;
 	min-width: 820px;
 }
 
@@ -23,12 +23,203 @@ a {
 	transition: color 0.15s ease;
 }
 
+/*
+input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[type=text], .roundfield input[type=url], .roundfield input[type=password], .roundfield input[type=number],
+			.linefield textarea, .linefield input[type=text], .linefield input[type=password],
+			.pretty-form input[type=text], .pretty-form textarea, .pretty-form input[type=password], .pretty-form input[type=number],
+			.login-form-side input[type=text], .login-form-side input[type=password] {
+				box-shadow: none!important;
+				background-color: #fff;
+				border: 1px solid #e5e5e5;
+				color: #707070;
+				transition: all 0.15s ease!important;
+			}
+
+				input:hover, textarea:hover, .roundfield textarea:hover, .roundfield input[type=text]:hover, .roundfield input[type=url]:hover, .roundfield input[type=password]:hover, .roundfield input[type=number]:hover,
+				.linefield textarea:hover, .linefield input[type=text]:hover, .linefield input[type=password]:hover,
+				.pretty-form input[type=text]:hover, .pretty-form textarea:hover, .pretty-form input[type=password]:hover, .pretty-form input[type=number]:hover,
+				.login-form-side input[type=text]:hover, .login-form-side input[type=password]:hover {
+					border-color: #C5C5C5;
+				}
+
+					input:active, textarea:active, .roundfield textarea:active, .roundfield input[type=text]:active, .roundfield input[type=url]:active, .roundfield input[type=password]:active, .roundfield input[type=number]:active,
+					.linefield textarea:active, .linefield input[type=text]:active, .linefield input[type=password]:active,
+					.pretty-form input[type=text]:active, .pretty-form textarea:active, .pretty-form input[type=password]:active, .pretty-form input[type=number]:active,
+					.login-form-side input[type=text]:active, .login-form-side input[type=password]:active {
+						outline: none!important;
+						border-color: #4F8EF7;
+						color: #4D5763;
+					}
+
+.btn, button {
+				margin: 4px 16px 4px 0px;
+				padding: 2px 18px;
+				background-color: #516AE8;
+				border: none;
+				border-radius: 2px;
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24);
+				color: #fff !important;
+				text-transform: uppercase;
+				font-weight: bold;
+				cursor: default;
+				transition: all 0.25s ease;
+				height: 32px;
+				font-size: 12px;
+			}
+
+				.btn:hover, button:hover {
+					box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.34);
+					background-color: #5A72EE;
+				}
+
+					.btn:active, button:active {
+						box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+						background-color: #4059DB;
+					}
+
+					.btn:focus, button:focus {outline: none;}
+*/
+
+
+/* Header */
+
+#header {
+	margin: 0px;
+	height: 0px;
+	border: none;
+}
+
+
+	#sr-header-area {
+		background-color: #757575;
+		border: 0px solid;
+		/*transition: all 0.15s ease;
+		*/height: 24px;
+		line-height: 23px;
+	}
+/*
+		#sr-header-area .width-clip {right: 300px;}
+			body:not(.loggedin) #sr-header-area .width-clip {right: 340px;}
+
+			#sr-header-area .sr-list {margin-right: 48px;}
+
+			#sr-header-area .sr-bar a, #sr-more-link, #sr-header-area .separator, #sr-header-area .dropdown.srdrop .selected {
+					background-color: transparent;
+					color:black;
+					transition: all 0.15s ease;
+				}
+
+			#sr-header-area:hover .sr-bar a, 
+			#sr-header-area:hover #sr-more-link, 
+			#sr-header-area:hover .seperator,
+			#sr-header-area:hover .dropdown.srdrop .selected {color: black;}
+
+			#sr-header-area .sr-bar a:hover, #sr-more-link:hover, #sr-header-area .dropdown.srdrop .selected:hover {
+					background-color: transparent;
+					border: 0px solid;
+					transition: all 0.15s ease;
+			}
+
+			a.random.choice {
+				padding-top: 2px;
+				position: relative;
+				display: inline-block;
+				margin-top: -2px;
+			}
+
+			#sr-header-area .dropdown.srdrop .selected {
+				margin: 0px 12px 0px 8px;
+				padding: 0px;
+				background-image: none;
+			}
+
+			#sr-header-area .dropdown.srdrop .selected:hover {text-decoration: underline;}
+
+			#sr-header-area .dropdown.srdrop .selected:after {
+				position: relative;
+				content: "▼";
+				margin-left: 4px;
+				font-size: 10px;
+			}
+
+*/
+			/* My Subreddits Dropdown */
+			/*
+			#sr-header-area .drop-choices.srdrop {
+				background-color: #fff;
+				border: none;
+				box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+			}
+
+			#sr-header-area .drop-choices a.choice {
+				border-bottom: 1px solid #edeeee;
+				color: black;
+				padding: 2px;
+			}
+
+			#sr-header-area .drop-choices a.choice:hover {
+				background-color: #f1f1f1;
+			}
+*/
+
+			#header-img.default-header, #header-img {
+				z-index: 99;
+				width: 0px;
+				padding-left: 48px;
+				height: 48px;
+				/*******************************************************************/
+				/*background-image: url(%%spritesheet%%);*/
+				background-color: gray;
+				background-position: -208px -48px;
+				position: relative;
+				top: 0px;
+				margin: 0;
+			}
+
+			#header-img.default-header:hover, #header-img:hover {
+				background-position: -208px -96px;
+			}
+
+
+		 	#header .pagename {
+		 		font-size: 0;
+		 	}
+
+	 		#header .pagename a {
+				display: inline-block;
+	 			color: white;
+	 			font-size: 22px;
+	 			padding: 11px;
+	 			font-weight: bold;
+	 			position: relative;
+	 			top: 0px;
+	 			font-family: arial;
+	 			margin: 0 4px;
+	 			vertical-align: top;
+	 			transition: background-color 0.25s ease;
+	 			font-variant: normal;
+	 		}
+
+			#header .pagename a:hover {
+				text-decoration: none;
+				background-color: rgba(0,0,0,0.08);
+			}
+
+			#header .pagename a:before {
+				content: "/r/";
+				font-size: 18px;
+				font-variant: normal;
+				letter-spacing: 1px;
+			}
+
 /* Tabmenu (hot/new/top) */
 #header-bottom-left {
 	position: absolute;
-	top: 36px;
+	top: 50px;
 	left: 16px;
 	text-align: center;
+	width: 100%;
+	background-color: #01579b;
 }
 
 #header .tabmenu {
@@ -43,7 +234,7 @@ a {
 		display: block;
 		margin: 0px 7px;
 		padding: 16px 16px;
-		background-color: blue;
+		background-color: #01579b ;
 		color: white;
 		text-transform: uppercase;
 		font-weight: normal;
@@ -67,7 +258,7 @@ a {
 
 	#header .tabmenu li.selected a {
 		padding: 16px 16px 14px 16px;
-		background-color: #2EFEF7;
+		background-color: #4fc3f7;
 		border: 0px;
 		border-bottom: 2px solid #fff;
 		color: black;
@@ -88,30 +279,32 @@ a {
 
 
 /* Sidebar */
+
 .side {
-	margin: 200px 16px 0px 0px;
+	margin: 100px 16px 0px 0px;
 	padding: 6px 16px;
-	background-color: #fff;
-	border-radius: 2px;
+	background-color: white;
+	border-radius: 1px;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.16);
 }
 
 /* Objects from top to bottom */
+/*
 #header-bottom-right {
 	position: absolute;
 	top:0px;
 	right: 0px;
 	width: auto;
-	max-width: 300px;
+	max-width: 400px;
 	height: 24px;
 	background-color: transparent;
 	font-size: 11px;
-	color: rgba(255,255,255,0.45);
+	color: black;
 	padding: 5px 8px 4px 2px;
 }
 
 	body:not(.loggedin) #header-bottom-right {max-width: 340px;}
-	#header-bottom-right a {color: #fff;}
+	#header-bottom-right a {color: silver;}
 	#header-bottom-right a:hover {text-decoration: underline;}
 
 .user .userkarma {
@@ -122,7 +315,9 @@ a {
 	transition: all 0.15s ease;
 }
 
-.separator, .user {color: rgba(255,255,255,0.45);}
+.separator, .user {
+	color: black;
+}
 
 
 #mail, #modmail {
@@ -140,7 +335,9 @@ a {
 		overflow: visible;
 	}
 
-	#mail.nohavemail {background-position: -32px -0px;}
+	#mail.nohavemail {
+		background-position: -32px -0px;
+	}
 
 	#mail.havemail {
 		background-position: -32px -16px;
@@ -194,12 +391,12 @@ a {
 		#modmail.nohavemail {background-position: -48px -0px;}
 		#modmail.havemail {background-position: -48px -16px;opacity: 1;
 	}
-
+*/
 /* preferences & logout icons */
-	#header-bottom-right a.pref-lang, .loggedin .logout a{
-		background-position: -0px -16px;
+/*	#header-bottom-right a.pref-lang, .loggedin .logout a{
+		background-position: 0px -16px;
 		background-color: purple;
-		width: 16px;
+		width: 30px;
 		height: 14px;
 		display: inline-block;
 		text-indent: -9999px;
@@ -209,18 +406,18 @@ a {
 		transition: all 0.25s ease;
 	}
 
-	.loggedin .logout a {background-position: -16px -0px;}
+	.loggedin .logout a {background-position: 0px -0px;}
 
 	.side:after {
 		display: block;
 		margin: 10px 0px;
 		padding: 10px 0px;
 		color: #5B92FA;
-
+*/
 	/* Please do not change or remove this line. */
-	content: "CSS Theme via /r/cleanUI";
-	/* Please do not change or remove this line. */
-
+/*	content: "CSS Theme via /r/cleanUI";
+*/	/* Please do not change or remove this line. */
+/*
 		text-transform: none;
 		font-size: 16px;
 		font-family: arial,sans-serif;
@@ -228,4 +425,142 @@ a {
 		width: 300px;
 		text-align: center;
 		right: 16px;
-		}
+		}*/
+
+		/* Body Content - Frontpage */
+			body >.content {
+				margin: 100px 332px 100px 230px;
+				padding: 0px;
+				border-radius: 2px;
+			}
+				body.listing-page >.content {box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);}
+
+				body:before {
+					height: 166px;
+					top: 0px;
+					position: absolute;
+					width: 100%;
+					left: 0px;
+					right: 0px;
+					background-color: #616161;
+					/*background-image: url(%%headerimg%%);
+					*/background-repeat: no-repeat;
+					background-position: 50% 0%;
+					content: "";
+					text-indent: -9999px;
+					z-index: -1;
+
+				}
+
+					@media only screen and (min-width : 1921px) {
+						body:before {background-size: cover;}
+					}
+
+				.sitetable {
+					position: relative;
+				}
+
+					.link {
+						margin: 0px;
+						padding: 0;
+						background-color: #fff;
+					}
+
+						/* Objects on the link from left to right */
+						body >.content .link .rank, .rank-spacer {display: none;}
+
+						/* Voting Arrows */
+						.link .midcol {
+							width: 36px !important;
+							margin: 15px 14px 0px 11px;
+							overflow: visible;
+							height: 60px;
+						}
+							.link .score {
+								line-height: 16px;
+								font-size: 12px;
+								margin: 1px 0px 1px 0px;
+							}
+
+								.link .score.likes {color: #ff6422;}
+								.link .score.dislikes {color: #5c5bd7;}
+
+							.arrow {
+								margin: 0px 0px 0px 2px;
+								/*background-image: url(%%spritesheet%%) !important;
+								*/background-color: red;
+								width: 33px;
+								border-radius: 2px;
+								transition: background-color 0.25s ease;
+							}
+
+								.arrow:hover {background-color: rgba(0,0,0,0.05);}
+
+								/* Upvotes */
+								.arrow.up {
+									height: 20px;
+									background-position: -64px 0px;
+									transition: background-color 0.25s ease;
+								}
+
+									.arrow.upmod {
+										height: 20px;
+										background-position: -128px 0px;
+										position: relative;
+									}
+
+										.arrow.upmod:focus:after {
+										    position: absolute;
+										    left:2px;
+										    bottom: -3px;
+										    width: 28px;
+										    height: 28px;
+										    opacity: 1;
+										    z-index:100;
+										    content: " ";
+										    background-color:#ff5500;
+										    border-radius: 28px;
+										    animation: upvote 0.35s ease-out forwards;
+										    -webkit-animation: upvote 0.35s ease-out forwards;
+										}
+
+								/* downvotes */
+								.arrow.down {
+									height: 20px;
+									background-position: -160px 0px;
+									transition: background-color 0.25s ease;
+								}
+									.arrow.downmod {
+										height: 20px;
+										background-position: -224px 0px;
+									}
+
+
+									/* Hover Message on Downvote */
+									.arrow.down:after {
+										display: block;
+										visibility: hidden;
+										position: absolute;
+										z-index: 1000;
+										margin-top: -6px;
+										margin-left: 32px;
+										padding: 12px;
+										background-color: rgba(79, 77, 192, 0.0);
+										border: none;
+										border-radius: 2px;
+										color: rgba(255, 255, 255, 0);
+										content: "For content that does not contribute to any discussion.";
+										text-align: center;
+										letter-spacing: 1px;
+										font-weight: normal;
+										font-size: 13px;
+										transition: all 0.25s ease;
+										pointer-events: none;
+									}
+
+										.arrow.down:hover:after {
+											visibility: visible;
+											background-color: rgba(79, 77, 192, 0.9);
+											color: #FFF;
+											margin-left: 48px;
+										}
