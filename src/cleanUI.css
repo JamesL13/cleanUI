@@ -91,7 +91,7 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 
 
 	#sr-header-area {
-		background-color: #757575;
+		background-color: #00bcd4 ;
 		border: 0px solid;
 		/*transition: all 0.15s ease;
 		*/height: 24px;
@@ -219,7 +219,8 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 	left: 16px;
 	text-align: center;
 	width: 100%;
-	background-color: #01579b;
+	background-color: #00bcd4 ;
+	box-shadow: 7px 3px 10px black;
 }
 
 #header .tabmenu {
@@ -241,6 +242,7 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 		font-size: 14px;
 		font-family: Roboto, sans-serif;
 		transition: color 0.25s ease, background-color 0.5s ease;
+		box-shadow: 7px 3px 10px black;
 	}
 
 	/* IF Headerimg is though */
@@ -281,14 +283,18 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 /* Sidebar */
 
 .side {
-	margin: 100px 16px 0px 0px;
+	margin: 150px 16px 0px 0px;
 	padding: 6px 16px;
 	background-color: white;
 	border-radius: 1px;
-	box-shadow: 0px 1px 5px rgba(0,0,0,0.16);
+	box-shadow: 7px 3px 10px black;
 }
 
 /* Objects from top to bottom */
+#header-bottom-right {
+	margin: 2px 0 0 0;
+	background: #80deea;
+}
 /*
 #header-bottom-right {
 	position: absolute;
@@ -426,14 +432,37 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 		text-align: center;
 		right: 16px;
 		}*/
+#search {
+	position: absolute;
+	right: 16px;
+	top: 105px;
+	width: 300px;
+	border: none;
+	box-shadow: 7px 3px 10px black;
+	z-index: 100;
+}
+    #search:focus::-webkit-#search-placeholder,
+    #search:valid::-webkit-#search-placeholder {
+      color: #1abc9c;
+      font-size: 11px;
+      transform: translateY(-20px);
+      visibility: visible !important;
+    }
+
+textarea {
+	min-width: 300px;
+}
 
 		/* Body Content - Frontpage */
 			body >.content {
-				margin: 100px 332px 100px 230px;
+				margin: 105px 332px 100px 230px;
 				padding: 0px;
 				border-radius: 2px;
+				min-width: 300px;
 			}
-				body.listing-page >.content {box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);}
+				body.listing-page >.content {
+					box-shadow: 7px 3px 10px black;
+				}
 
 				body:before {
 					height: 166px;
@@ -564,3 +593,141 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 											color: #FFF;
 											margin-left: 48px;
 										}
+
+
+.morelink {
+  border: none;
+  background: #18ffff;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0px 6px;
+  width: 200px;
+  margin-left: 25px;
+  box-shadow: 3px 1px 5px black;
+  text-align: center;
+  font-size: 14px;
+  }
+
+.morelink:hover {
+	background: #00b8d4; 
+    transform: translateY(-3px);
+    box-shadow: 7px 3px 10px black;
+}
+
+.morelink:active {
+	background-color: #00b8d4;
+	box-shadow: 7px 3px 10px black;
+}
+
+.nub {
+	display: none;
+}
+
+  .btn, button {
+  border: none;
+  background: #18ffff;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: black;
+  margin-left: 25px;
+  box-shadow: 3px 1px 5px black;
+  }
+
+  .btn:hover, button:hover {
+  	background: #00b8d4;
+  	box-shadow: 7px 3px 10px black;
+  }
+
+/* Restricted button */
+.disabled .morelink {
+	box-shadow: none !important;
+	background-color: #CFCFCF;
+}
+
+.disabled .morelink a {
+	color: #4d5763;
+}
+
+.disabled .morelink:after {
+	content: "You must be approved by the moderators in order to submit.";
+	background-color: #CFCFCF;
+	color: #4d5763;
+}
+
+
+/* Subscribe Button */
+.titlebox .fancy-toggle-button {
+	position: relative;
+}
+
+.titlebox .fancy-toggle-button .add, .titlebox .fancy-toggle-button .remove {
+	position: absolute;
+	right: -265px;
+	top: -40px;
+	background-image: none;
+	border-radius: 0px;
+	background-color: #51A3E8;
+	border: 0px solid;
+	box-shadow: 3px 1px 5px black;
+	/*background-image: url(%%spritesheet%%);*/
+	background: #f44336;
+	transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
+	outline: none !important;
+	font-size: 12px;
+}
+
+.titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .remove:hover {
+	box-shadow: 7px 3px 10px black;
+}
+/*
+						.titlebox .fancy-toggle-button .add:active, .titlebox .fancy-toggle-button .remove:active {
+							box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.64);
+						}
+
+					.titlebox .fancy-toggle-button .add {
+						background-color: #516AE8;
+						background-position: -208px -144px;
+					}
+
+						.titlebox .fancy-toggle-button .add:hover {background-color: #5A72EE;}
+
+							.titlebox .fancy-toggle-button .add:active {
+								background-color: #fff;
+								background-position: -208px -192px;
+							}
+
+					.titlebox .fancy-toggle-button .remove {
+						background-color: #fff;
+						background-position: -208px -192px;
+					}
+
+						.titlebox .fancy-toggle-button .remove:hover {background-color: rgba(0,0,0,0.05);}
+
+							.titlebox .fancy-toggle-button .remove:active {
+								background-color: #5A72EE;
+								background-position: -208px -144px;
+							}
+							*/
+
+
+.res .RESshortcutside, .res .RESDashboardToggle {
+	background: #1e88e5;
+	border: none;
+	color: #4D5763;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 0px;
+	padding: 4px 2px 4px 0px;
+	margin: 2px 20px 2px -4px;
+	text-align: center;
+	width: auto;
+	color: white;
+	box-shadow: 3px 1px 5px black;
+}
+
+.res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
+	background: blue;
+	box-shadow: 7px 3px 10px black;
+}
