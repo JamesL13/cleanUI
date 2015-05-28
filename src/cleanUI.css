@@ -1,5 +1,4 @@
 /*
-Version: 0.02
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -216,8 +215,9 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 #header-bottom-left {
 	position: absolute;
 	top: 50px;
-	left: 16px;
-	text-align: center;
+	/*left: 16px;
+	right: 16px;
+	*/text-align: center;
 	width: 100%;
 	background-color: #00bcd4 ;
 	box-shadow: 7px 3px 10px black;
