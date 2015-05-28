@@ -1,5 +1,5 @@
 /*
-Version: 0.55
+Version: 0.60
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -14,7 +14,7 @@ Subreddit: /r/cleanUI;
 body {
 	overflow-x: hidden;
 	background-color: #e0f7fa;
-	min-width: 820px;
+	min-width: 850px;
 }
 
 /* General Styles - Links / Buttons / Inputs */
@@ -221,7 +221,7 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 	*/text-align: center;
 	width: 100%;
 	background-color: #00bcd4 ;
-	box-shadow: 7px 3px 10px black;
+	box-shadow: 3px 1px 5px black;
 }
 
 #header .tabmenu {
@@ -243,7 +243,7 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 		font-size: 14px;
 		font-family: Roboto, sans-serif;
 		transition: color 0.25s ease, background-color 0.5s ease;
-		box-shadow: 7px 3px 10px black;
+		box-shadow: 3px 1px 5px black;
 	}
 
 	/* IF Headerimg is though */
@@ -257,6 +257,7 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 
 	#header .tabmenu li a:hover {
 		background-color: #08088A;
+		box-shadow: 7px 3px 10px black;
 	}
 
 	#header .tabmenu li.selected a {
@@ -270,6 +271,7 @@ input:not([type="submit"]), textarea, .roundfield textarea, .roundfield input[ty
 
 	#header .tabmenu li.selected a:hover {
 		background-color: #A9F5F2;
+		box-shadow: 7px 3px 10px black;
 	}
 
 	.listing-page .tabmenu li > a[href$="/rising/"], .wiki-page .tabmenu li > a[href$="/rising/"],
@@ -680,6 +682,7 @@ textarea {
 }
 
 .titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .remove:hover {
+	background: #d50000;
 	box-shadow: 7px 3px 10px black;
 }
 /*
