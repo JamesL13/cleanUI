@@ -1,9 +1,8 @@
 /*
-Version: 0.80
+Version: 1.0
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
-
 
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
@@ -13,81 +12,119 @@ Subreddit: /r/cleanUI;
 
 body {
 	overflow-x: hidden;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR YOUR PAGE
+	*******************************************************************/
 	background-color: #e0f7fa;
 	min-width: 850px;
 }
 
-/* General Styles - Links / Buttons / Inputs */
+/*********************************************************************/
+/* General */
 a {
 	color: #0000FF;
 	transition: color 0.15s ease;
 }
 
-/* Header */
+.btn, button {
+	border: none;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR BUTTONS
+	*******************************************************************/
+	background: #18ffff;
+	cursor: pointer;
+	border-radius: 3px;
+	padding: 6px;
+	width: 200px;
+	color: black;
+	margin: 0px auto;
+	box-shadow: 3px 1px 5px black;
+}
 
+.btn:hover, button:hover {
+	background: #00b8d4;
+  	box-shadow: 7px 3px 10px black;
+}
+
+textarea {
+	min-width: 300px;
+}
+
+
+/**********************************************************************/
+
+
+/* Header */
 #header {
 	margin: 0px;
 	height: 0px;
 	border: none;
 }
 
+#sr-header-area {
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR YOUR BANNER
+	*******************************************************************/
+	background-color: #00bcd4;
+	border: 0px solid;
+	height: 24px;
+	line-height: 23px;
+}
 
-	#sr-header-area {
-		background-color: #00bcd4;
-		border: 0px solid;
-		height: 24px;
-		line-height: 23px;
-	}
+#header-img.default-header, #header-img {
+	z-index: 99;
+	width: 115px;
+	padding-left: 48px;
+	height: 46px;
+	/*******************************************************************
+	EDIT YOUR SPRITE HERE FOR THE REDDIT LOGO
+	*******************************************************************/
+	background-image: url(%%spritesheet2%%) 93px -100px;
+	background-color: transparent;
+	position: relative;
+	top: 0px;
+	margin: 0;
+}
 
-			#header-img.default-header, #header-img {
-				z-index: 99;
-				width: 115px;
-				padding-left: 48px;
-				height: 46px;
-				/*******************************************************************/
-				background-image: url(%%spritesheet2%%) 93px -100px;
-				background-color: transparent;
-				position: relative;
-				top: 0px;
-				margin: 0;
-			}
+#header .pagename {
+	font-size: 0;
+}
 
-		 	#header .pagename {
-		 		font-size: 0;
-		 	}
+#header .pagename a {
+	display: inline-block;
+	color: white;
+	font-size: 22px;
+	padding: 11px;
+	font-weight: bold;
+	position: relative;
+	top: 10px;
+	font-family: Roboto;
+	margin: 0 4px;
+	vertical-align: top;
+	transition: background-color 0.25s ease;
+	font-variant: normal;
+}
 
-	 		#header .pagename a {
-				display: inline-block;
-	 			color: white;
-	 			font-size: 22px;
-	 			padding: 11px;
-	 			font-weight: bold;
-	 			position: relative;
-	 			top: 10px;
-	 			font-family: arial;
-	 			margin: 0 4px;
-	 			vertical-align: top;
-	 			transition: background-color 0.25s ease;
-	 			font-variant: normal;
-	 		}
+#header .pagename a:hover {
+	text-decoration: none;
+}
 
-			#header .pagename a:hover {
-				text-decoration: none;
-			}
+#header .pagename a:before {
+	content: "/r/";
+	font-size: 22px;
+	font-variant: normal;
+	letter-spacing: 1px;
+}
 
-			#header .pagename a:before {
-				content: "/r/";
-				font-size: 22px;
-				font-variant: normal;
-				letter-spacing: 1px;
-			}
-
-/* Tabmenu (hot/new/top) */
+/* TabMenu */
 #header-bottom-left {
 	position: absolute;
 	top: 50px;
 	text-align: center;
 	width: 100%;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR WHERE THE USERNAME IS
+	*******************************************************************/
 	background-color: #00bcd4 ;
 	box-shadow: 3px 1px 5px black;
 }
@@ -99,56 +136,62 @@ a {
 	margin: 0px;
 }
 
-#header .tabmenu ul li {margin: 0px !important;}
-	#header .tabmenu li a {
-		display: block;
-		margin: 0px 7px;
-		padding: 16px 16px;
-		background-color: #01579b;
-		color: white;
-		text-transform: uppercase;
-		font-weight: normal;
-		font-size: 14px;
-		font-family: Roboto, sans-serif;
-		transition: color 0.25s ease, background-color 0.5s ease;
-		box-shadow: 3px 1px 5px black;
-	}
+#header .tabmenu ul li {
+	margin: 0px !important;
+}
 
-	/* IF Headerimg is though */
-	#header .tabmenu li a {
-		color: #fff;
-	}
+#header .tabmenu li a {
+	display: block;
+	margin: 0px 7px;
+	padding: 16px 16px;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR THE TABS
+	*******************************************************************/
+	background-color: #01579b;
+	color: white;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: Roboto, sans-serif;
+	transition: color 0.25s ease, background-color 0.5s ease;
+	box-shadow: 3px 1px 5px black;
+}
 
-	#header .tabmenu li a, .pagename a {
-		/*text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);*/
-	}
+#header .tabmenu li a {
+	color: #fff;
+}
 
-	#header .tabmenu li a:hover {
-		background-color: #08088A;
-		box-shadow: 7px 3px 10px black;
-	}
+#header .tabmenu li a:hover {
+	background-color: #08088A;
+	box-shadow: 7px 3px 10px black;
+}
 
-	#header .tabmenu li.selected a {
-		padding: 16px 16px 14px 16px;
-		background-color: #4fc3f7;
-		border: 0px;
-		border-bottom: 2px solid #fff;
-		color: black;
-		font-weight: bold;
-	}
+#header .tabmenu li.selected a {
+	padding: 16px 16px 14px 16px;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR TAB THAT IS SELECTED
+	*******************************************************************/
+	background-color: #4fc3f7;
+	border: 0px;
+	border-bottom: 2px solid #fff;
+	color: black;
+	font-weight: bold;
+}
 
-	#header .tabmenu li.selected a:hover {
-		background-color: #A9F5F2;
-		box-shadow: 7px 3px 10px black;
-	}
+#header .tabmenu li.selected a:hover {
+	background-color: #A9F5F2;
+	box-shadow: 7px 3px 10px black;
+}
 
-	.listing-page .tabmenu li > a[href$="/rising/"], .wiki-page .tabmenu li > a[href$="/rising/"],
-	.listing-page .tabmenu li > a[href$="/controversial/"], .wiki-page .tabmenu li > a[href$="/controversial/"],
-	.listing-page .tabmenu li > a[href$="/promoted/"], .wiki-page .tabmenu li > a[href$="/promoted/"],
-	.listing-page .tabmenu li > a[href$="/gilded/"], .wiki-page .tabmenu li > a[href$="/gilded/"]
-	{
-		display:none!important;
-	}
+.listing-page .tabmenu li > a[href$="/rising/"], .wiki-page .tabmenu li > a[href$="/rising/"],
+.listing-page .tabmenu li > a[href$="/controversial/"], .wiki-page .tabmenu li > a[href$="/controversial/"],
+.listing-page .tabmenu li > a[href$="/promoted/"], .wiki-page .tabmenu li > a[href$="/promoted/"],
+.listing-page .tabmenu li > a[href$="/gilded/"], .wiki-page .tabmenu li > a[href$="/gilded/"]
+{
+	display:none!important;
+}
+
+/**********************************************************************/
 
 
 /* Sidebar */
@@ -156,6 +199,9 @@ a {
 .side {
 	margin: 150px 16px 0px 0px;
 	padding: 6px 16px;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR RIGHT SIDE
+	*******************************************************************/
 	background-color: white;
 	border-radius: 1px;
 	box-shadow: 7px 3px 10px black;
@@ -177,168 +223,20 @@ a {
 	box-shadow: 7px 3px 10px black;
 	z-index: 100;
 }
-    #search:focus::-webkit-#search-placeholder,
-    #search:valid::-webkit-#search-placeholder {
-      color: #1abc9c;
-      font-size: 11px;
-      transform: translateY(-20px);
-      visibility: visible !important;
-    }
 
-textarea {
-	min-width: 300px;
+#search:focus::-webkit-#search-placeholder,
+#search:valid::-webkit-#search-placeholder {
+	color: #1abc9c;
+    font-size: 11px;
+    transform: translateY(-20px);
+    visibility: visible !important;
 }
-
-		/* Body Content - Frontpage */
-			body >.content {
-				margin: 105px 332px 100px 230px;
-				padding: 0px;
-				border-radius: 2px;
-				min-width: 300px;
-			}
-				body.listing-page >.content {
-					box-shadow: 7px 3px 10px black;
-				}
-
-				body:before {
-					height: 166px;
-					top: 0px;
-					position: absolute;
-					width: 100%;
-					left: 0px;
-					right: 0px;
-					/*background-color: #616161;
-					*/background-image: url(%%background%%);
-					-webkit-background-size: cover;
-        			-moz-background-size: cover;
-        			-o-background-size: cover;
-        			background-size: cover;
-					/*background-position: 50% 0%;
-					*/content: "";
-					text-indent: -9999px;
-					z-index: -1;
-
-				}
-
-					@media only screen and (min-width : 1921px) {
-						body:before {background-size: cover;}
-					}
-
-				.sitetable {
-					position: relative;
-				}
-
-					.link {
-						margin: 0px;
-						padding: 0;
-						background-color: #fff;
-					}
-
-						/* Objects on the link from left to right */
-						body >.content .link .rank, .rank-spacer {display: none;}
-
-						/* Voting Arrows */
-						.link .midcol {
-							width: 36px !important;
-							margin: 15px 14px 0px 11px;
-							overflow: visible;
-							height: 60px;
-						}
-							.link .score {
-								line-height: 16px;
-								font-size: 12px;
-								margin: 1px 0px 1px 0px;
-							}
-
-								.link .score.likes {color: #ff6422;}
-								.link .score.dislikes {color: #5c5bd7;}
-
-							.arrow {
-								margin: 0px 0px 0px 2px;
-								background-image: url(%%spritesheet%%) !important;
-								/*background-color: red;*/
-								width: 33px;
-								height: 100px;
-								border-radius: 2px;
-								transition: background-color 0.25s ease;
-							}
-
-								.arrow:hover {background-color: rgba(0,0,0,0.05);}
-
-								/* Upvotes */
-								.arrow.up {/*-64px 0px*/
-									height: 20px;
-									background-position: -64px 0px;
-									transition: background-color 0.25s ease;
-								}
-
-									.arrow.upmod {/*-128px 0px*/
-										height: 20px;
-										background-position: -128px 0px;
-										position: relative;
-										background-color: blue;
-									}
-
-										.arrow.upmod:focus:after {
-										    position: absolute;
-										    left:2px;
-										    bottom: -3px;
-										    width: 28px;
-										    height: 28px;
-										    opacity: 1;
-										    z-index:100;
-										    content: " ";
-										    /*background-color: blue;*/
-										    border-radius: 28px;
-										    animation: upvote 0.35s ease-out forwards;
-										    -webkit-animation: upvote 0.35s ease-out forwards;
-										}
-
-								/* downvotes */
-								.arrow.down {
-									height: 20px;
-									background-position: -160px 0px;
-									transition: background-color 0.25s ease;
-								}
-									.arrow.downmod {
-										height: 20px;
-										background-position: -224px 0px;
-										background-color: red;
-									}
-
-
-									/* Hover Message on Downvote */
-									.arrow.down:after {
-										display: block;
-										visibility: hidden;
-										position: absolute;
-										z-index: 1000;
-										margin-top: -6px;
-										margin-left: 32px;
-										padding: 12px;
-										background-color: red;
-										border: none;
-										border-radius: 2px;
-										color: rgba(255, 255, 255, 0);
-										content: "For content that does not contribute to any discussion.";
-										text-align: center;
-										letter-spacing: 1px;
-										font-weight: normal;
-										font-size: 13px;
-										transition: all 0.25s ease;
-										pointer-events: none;
-									}
-
-										.arrow.down:hover:after {
-											visibility: visible;
-											background-color: rgba(79, 77, 192, 0.9);
-											color: #FFF;
-											margin-left: 48px;
-										}
-
 
 .morelink {
   border: none;
+  /*******************************************************************
+	EDIT BACKGROUND COLOR FOR SUBMIT NEW CONTENT BUTTONS
+  *******************************************************************/
   background: #18ffff;
   cursor: pointer;
   border-radius: 3px;
@@ -364,23 +262,6 @@ textarea {
 .nub {
 	display: none;
 }
-
-  .btn, button {
-  border: none;
-  background: #18ffff;
-  cursor: pointer;
-  border-radius: 3px;
-  padding: 6px;
-  width: 200px;
-  color: black;
-  margin-left: 25px;
-  box-shadow: 3px 1px 5px black;
-  }
-
-  .btn:hover, button:hover {
-  	background: #00b8d4;
-  	box-shadow: 7px 3px 10px black;
-  }
 
 /* Restricted button */
 .disabled .morelink {
@@ -408,8 +289,10 @@ textarea {
 	position: absolute;
 	right: -265px;
 	top: -40px;
-	background-image: none;
 	border-radius: 0px;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR SUBSCRIBE BUTTON
+	*******************************************************************/
 	background-color: #51A3E8;
 	border: 0px solid;
 	box-shadow: 3px 1px 5px black;
@@ -425,6 +308,9 @@ textarea {
 }
 
 .res .RESshortcutside, .res .RESDashboardToggle {
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR RES SHORTCUT BUTTONS
+	*******************************************************************/
 	background: #1e88e5;
 	border: none;
 	color: #4D5763;
@@ -440,7 +326,212 @@ textarea {
 }
 
 .res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
-	background: blue;
+	background: #0d47a1;
 	box-shadow: 7px 3px 10px black;
 }
 
+
+/**********************************************************************/
+
+/* Body */
+body >.content {
+	margin: 105px 332px 100px 230px;
+	padding: 0px;
+	border-radius: 2px;
+	min-width: 300px;
+}
+
+body.listing-page >.content {
+	box-shadow: 7px 3px 10px black;
+}
+
+body:before {
+	height: 166px;
+	top: 0px;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR OR SPRITE FOR BACKGROUND BEHIND BANNER AT TOP
+	IF YOU WANT TO JUST DO A SOLID COLOR COMMENT OUT BACKGROUND IMAGE
+	AND UNCOMMENT BACKGROUND COLOR
+	*******************************************************************/
+	/*background-color: #616161;*/
+	background-image: url(%%background%%);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	/*background-position: 50% 0%;*/
+	content: "";
+	text-indent: -9999px;
+	z-index: -1;
+}
+
+@media only screen and (min-width : 1921px) {
+	body:before {
+		background-size: cover;
+	}
+}
+
+.sitetable {
+	position: relative;
+}
+
+.link {
+	margin: 0px;
+	padding: 0;
+	background-color: #fff;
+}
+
+/* Objects on the link from left to right */
+body >.content .link .rank, .rank-spacer {
+	display: none;
+}
+
+/* Voting Arrows */
+.link .midcol {
+	width: 36px !important;
+	margin: 15px 14px 0px 11px;
+	overflow: visible;
+	height: 60px;
+}
+
+.link .score {
+	line-height: 16px;
+	font-size: 12px;
+	margin: 1px 0px 1px 0px;
+}
+
+.link .score.likes {
+	color: #ff6422;
+}
+
+.link .score.dislikes {
+	color: #5c5bd7;
+}
+
+.arrow {
+	margin: 0px 0px 0px 2px;
+	/*******************************************************************
+	EDIT YOUR SPRITE HERE FOR THE ARROW
+	*******************************************************************/
+	background-image: url(%%spritesheet%%) !important;
+	/*background-color: red;*/
+	width: 33px;
+	height: 100px;
+	border-radius: 2px;
+	transition: background-color 0.25s ease;
+}
+
+.arrow:hover {
+	background-color: rgba(0,0,0,0.05);
+}
+
+/* Upvotes */
+.arrow.up {
+	height: 20px;
+	background-position: -64px 0px;
+	transition: background-color 0.25s ease;
+}
+
+.arrow.upmod {
+	height: 20px;
+	background-position: -128px 0px;
+	position: relative;
+	background-color: blue;
+}
+
+.arrow.upmod:focus:after {
+    position: absolute;
+    left:2px;
+    bottom: -3px;
+    width: 28px;
+    height: 28px;
+    opacity: 1;
+    z-index:100;
+    content: " ";
+    border-radius: 28px;
+    animation: upvote 0.35s ease-out forwards;
+    -webkit-animation: upvote 0.35s ease-out forwards;
+}
+
+/* downvotes */
+.arrow.down {
+	height: 20px;
+	background-position: -160px 0px;
+	transition: background-color 0.25s ease;
+}
+
+.arrow.downmod {
+	height: 20px;
+	background-position: -224px 0px;
+	background-color: red;
+}
+
+.arrow.down:hover:after {
+	visibility: visible;
+	background-color: rgba(79, 77, 192, 0.9);
+	color: #FFF;
+	margin-left: 48px;
+}
+
+/***********************************************************************/
+
+/*Submit Page*/
+.tabmenu{
+	font-size: 25px !important;
+	text-transform: uppercase;
+	margin: 0px auto;
+	border-style: none;
+	text-align: center;
+}
+
+.formtab:hover {
+
+}
+
+.formtabs-content {
+	font-size: 16px;
+	margin: 0px auto;
+}
+
+.link-button {
+	margin: 0px auto;
+}
+
+.infobar {
+	background: transparent;
+	border-style: none;
+	font-weight: bold;
+}
+
+h1, h2{
+	color: #d500f9;
+}
+
+.roundfield {
+	background: transparent;
+	margin: 0px auto;
+}
+
+#suggested-reddits {
+	display: none;
+}
+
+.submit-page #newlink.submit.content .btn {
+						width: 100%;
+						padding: 6px;
+						height: 42px;
+						margin: 0px auto !important;
+						box-shadow: 3px 1px 5px black;
+						cursor: pointer;
+						font-size: 16px;
+						text-transform: uppercase;
+					}
+
+.submit-page #newlink.submit.content .btn:hover {
+	box-shadow: 7px 3px 10px black;
+	background: #00b8d4;
+}
