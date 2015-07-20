@@ -1,5 +1,5 @@
 /*
-Version: 1.2
+Version: 1.21
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -7,6 +7,12 @@ Subreddit: /r/cleanUI;
 /*
 WHAT'S NEW?
 
+7/20/2015
+1) MOVED USERNAME AND INFO TO REDDIT HEADER BAR
+2) CHANGED STYLING ON USERNAME AND INFO BAR
+
+
+*****************VERSION 1.2***********************
 7/19/2015
 1) MOVED HEADER DOWN
 2) MOVED BODY AND RIGHT SIDE DOWN
@@ -15,7 +21,7 @@ WHAT'S NEW?
 5) CHANGED TAB MENU LOOK
 6) ADDED NEW BACKGROUND IMAGE
 
-*****************************************************
+*****************VERSION 1.1***********************
 7/10/2015
 1) HID SIDE BAR ON SUBMIT A NEW LINK/TEXT POST PAGE TO MAKE IT BETTER FOR SMALLER WINDOWS
 2) CHANGED COLOR SCHEME SLIGHLTLY
@@ -245,9 +251,20 @@ textarea {
 
 /* Objects from top to bottom */
 #header-bottom-right {
+	position: absolute;
 	margin: 2px 0 0 0;
-	background: #2196F3;
-	font-size: 11px;
+	font-size: 1em;
+	top: 135px !important;
+	background-color: transparent;
+	width: 20%;
+	min-width: 448px;
+}
+
+#userbarToggle {
+	background: transparent !important;
+	color: black !important;
+	font-size: 2em !important;
+	padding: 0px;
 }
 
 #search {
