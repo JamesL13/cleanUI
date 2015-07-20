@@ -545,6 +545,10 @@ body >.content .link .rank, .rank-spacer {
 	font-weight: bold;
 }
 
+.infobar .newsletterbar {
+	display: none;
+}
+
 h1, h2{
 	color: #d500f9;
 }
