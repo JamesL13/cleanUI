@@ -1,5 +1,5 @@
 /*
-Version: 1.1
+Version: 1.2
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -7,6 +7,15 @@ Subreddit: /r/cleanUI;
 /*
 WHAT'S NEW?
 
+7/19/2015
+1) MOVED HEADER DOWN
+2) MOVED BODY AND RIGHT SIDE DOWN
+3) UPDATED COLOR SCHEME
+4) HID SOME USELESS RES TIPS
+5) CHANGED TAB MENU LOOK
+6) ADDED NEW BACKGROUND IMAGE
+
+*****************************************************
 7/10/2015
 1) HID SIDE BAR ON SUBMIT A NEW LINK/TEXT POST PAGE TO MAKE IT BETTER FOR SMALLER WINDOWS
 2) CHANGED COLOR SCHEME SLIGHLTLY
@@ -36,6 +45,7 @@ body {
 a {
 	color: #FF8F32;
 	transition: color 0.15s ease;
+	font-weight: bold;
 }
 
 .btn, button {
@@ -59,7 +69,7 @@ a {
 }
 
 textarea {
-	min-width: 300px;
+	min-width: 350px;
 }
 
 
@@ -73,11 +83,16 @@ textarea {
 	border: none;
 }
 
+#header-bottom-left {
+	position: absolute;
+	top: 118px !important;
+}
+
 #sr-header-area {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR YOUR BANNER
 	*******************************************************************/
-	background-color: #68E1E1;
+	background-color: #2196F3;
 	border: 0px solid;
 	height: 24px;
 	line-height: 23px;
@@ -94,7 +109,6 @@ textarea {
 	background-image: url(%%spritesheet2%%) 93px -100px;
 	background-color: transparent;
 	position: relative;
-	top: 0px;
 	margin: 0;
 }
 
@@ -137,7 +151,7 @@ textarea {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR WHERE THE USERNAME IS
 	*******************************************************************/
-	background-color: #68E1E1;
+	background-color: #2196F3;
 	box-shadow: 3px 1px 5px black;
 }
 
@@ -159,14 +173,23 @@ textarea {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR THE TABS
 	*******************************************************************/
-	background-color: #68E1E1;
+	background-color: transparent;
 	color: white;
 	text-transform: uppercase;
 	font-weight: normal;
 	font-size: 14px;
 	font-family: Roboto, sans-serif;
 	transition: color 0.25s ease, background-color 0.5s ease;
-	box-shadow: 3px 1px 5px black;
+}
+
+#header .tabmenu {
+	background: #2196F3;
+	border: 1px black;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	border-radius: 10px;
+	height: 1500px;
 }
 
 #header .tabmenu li a {
@@ -174,8 +197,7 @@ textarea {
 }
 
 #header .tabmenu li a:hover {
-	background-color: #08088A;
-	box-shadow: 7px 3px 10px black;
+	background-color: #1976D2;
 }
 
 #header .tabmenu li.selected a {
@@ -183,16 +205,15 @@ textarea {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR TAB THAT IS SELECTED
 	*******************************************************************/
-	background-color: #4fc3f7;
+	background-color: transparent;
 	border: 0px;
 	border-bottom: 2px solid #fff;
-	color: black;
+	color: white;
 	font-weight: bold;
 }
 
 #header .tabmenu li.selected a:hover {
-	background-color: #A9F5F2;
-	box-shadow: 7px 3px 10px black;
+	background-color: #64B5F6;
 }
 
 .listing-page .tabmenu li > a[href$="/rising/"], .wiki-page .tabmenu li > a[href$="/rising/"],
@@ -208,7 +229,7 @@ textarea {
 /* Sidebar */
 
 .side {
-	margin: 150px 16px 0px 0px;
+	margin: 200px 16px 0px 0px;
 	padding: 6px 16px;
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR RIGHT SIDE
@@ -225,14 +246,14 @@ textarea {
 /* Objects from top to bottom */
 #header-bottom-right {
 	margin: 2px 0 0 0;
-	background: #80deea;
+	background: #2196F3;
 	font-size: 11px;
 }
 
 #search {
 	position: absolute;
 	right: 16px;
-	top: 105px;
+	top: 167px;
 	width: 300px;
 	border: 0;
 	color: #FF8F32;
@@ -358,7 +379,7 @@ body >.content {
 }
 
 body.listing-page >.content {
-	box-shadow: 7px 3px 10px black;
+	
 }
 
 body:before {
@@ -374,12 +395,12 @@ body:before {
 	AND UNCOMMENT BACKGROUND COLOR
 	*******************************************************************/
 	/*background-color: #616161;*/
-	background-image: url(%%background%%);
+	background-image: url(%%CleanUIHeaderImage%%);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	/*background-position: 50% 0%;*/
+	background-position: 50% 50%;
 	content: "";
 	text-indent: -9999px;
 	z-index: -1;
@@ -393,6 +414,7 @@ body:before {
 
 .sitetable {
 	position: relative;
+	top: 95px;
 }
 
 .link {
@@ -518,7 +540,7 @@ body >.content .link .rank, .rank-spacer {
 }
 
 .infobar {
-	background: #68E1E1;
+	background: #2196F3;
 	border-style: none;
 	font-weight: bold;
 }
@@ -552,6 +574,8 @@ h1, h2{
 	background: #00b8d4;
 }
 
+/*NEED TO BE ORGANIZED*/
+
 @media screen and (max-width: 850px ) {
 	#search {
 		width: 200px;
@@ -576,4 +600,42 @@ h1, h2{
 
 }
 
+#RESStyleSheetTipPane {
+	display: none !important;
+}
 
+#RESStyleSheetTipPane-header {
+	display: none;
+}
+
+.sheets .col textarea {
+	width: 100%;
+	position: relative;
+	top: 70px;
+}
+
+.stylesheet-customize-container h2 {
+	display: none;
+}
+
+#subreddit_stylesheet span.btn.right {
+
+}
+
+#subreddit_stylesheet .pretty-form {
+	height: 500px;
+}
+
+
+#subreddit_stylesheet .sheets .btn {
+	position: relative;
+	display: block;
+	top: -40px;
+	right: -200px;
+	width: 100px;
+}
+
+#subreddit_stylesheet span.btn.right {
+	right: -150px;
+	top: 1px;
+}
