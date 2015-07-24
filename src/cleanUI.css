@@ -1,5 +1,5 @@
 /*
-Version: 1.21
+Version: 1.22
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -7,6 +7,14 @@ Subreddit: /r/cleanUI;
 /*
 WHAT'S NEW?
 
+7/24/2015
+1) FIXED SEARCH BAR STYLING
+2) FIXED SIDE BAR BUTTONS STYLING
+3) FIXED BUGS ON SUBMIT PAGE
+4) FIXED BUGS ON COMMENT PAGE
+
+
+*****************VERSION 1.21***********************
 7/20/2015
 1) MOVED USERNAME AND INFO TO REDDIT HEADER BAR
 2) CHANGED STYLING ON USERNAME AND INFO BAR
@@ -240,9 +248,9 @@ textarea {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR RIGHT SIDE
 	*******************************************************************/
-	background-color: white;
+	/*background-color: silver;
 	border-radius: 1px;
-	box-shadow: 7px 3px 10px black;
+	border: solid black;*/
 }
 
 .submit-page .side {
@@ -267,23 +275,24 @@ textarea {
 	padding: 0px;
 }
 
-#search {
+input[type="text"][name="q"]  {
 	position: absolute;
 	right: 16px;
-	top: 167px;
+	top: 177px;
 	width: 300px;
 	border: 0;
 	color: #FF8F32;
-	box-shadow: 7px 3px 10px black;
+	border-radius: 10px;
 	z-index: 100;
+	text-align: center;
 }
 
-#search:focus::-webkit-#search-placeholder,
-#search:valid::-webkit-#search-placeholder {
-	color: #1abc9c;
-    font-size: 11px;
-    transform: translateY(-20px);
-    visibility: visible !important;
+input[type="text"][name="name"] #img-name {
+	border-style: dashed;
+}
+
+input[type="submit"] {
+	display: none;
 }
 
 .morelink {
@@ -292,25 +301,20 @@ textarea {
 	EDIT BACKGROUND COLOR FOR SUBMIT NEW CONTENT BUTTONS
   *******************************************************************/
   background: #18ffff;
+  right: 16px;
   cursor: pointer;
   border-radius: 3px;
-  padding: 0px 6px;
-  width: 200px;
-  margin-left: 25px;
-  box-shadow: 3px 1px 5px black;
+  width: 300px;
   text-align: center;
   font-size: 14px;
   }
 
 .morelink:hover {
 	background: #00b8d4; 
-    transform: translateY(-3px);
-    box-shadow: 7px 3px 10px black;
 }
 
 .morelink:active {
 	background-color: #00b8d4;
-	box-shadow: 7px 3px 10px black;
 }
 
 .nub {
@@ -339,49 +343,51 @@ textarea {
 	position: relative;
 }
 
-.titlebox .fancy-toggle-button .add, .titlebox .fancy-toggle-button .remove {
-	position: absolute;
-	right: -265px;
-	top: -40px;
+.titlebox .fancy-toggle-button .option .add, .titlebox .fancy-toggle-button .remove {
+	position: relative;
+	right: 16px;
 	border-radius: 0px;
+	width: 300px;
+	display: block;
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR SUBSCRIBE BUTTON
 	*******************************************************************/
 	background-color: #51A3E8;
 	border: 0px solid;
-	box-shadow: 3px 1px 5px black;
 	background: #f44336;
-	transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
 	outline: none !important;
 	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .remove:hover {
 	background: #d50000;
-	box-shadow: 7px 3px 10px black;
 }
 
 .res .RESshortcutside, .res .RESDashboardToggle {
+	position: relative;
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR RES SHORTCUT BUTTONS
 	*******************************************************************/
 	background: #1e88e5;
+	display: block;
 	border: none;
 	color: #4D5763;
+	width: 300px;
+	height: 20px;
+	right: 16px;
+	margin-top: 5px;
 	text-transform: uppercase;
 	text-decoration: none;
 	border-radius: 0px;
-	padding: 4px 2px 4px 0px;
-	margin: 2px 20px 2px -4px;
 	text-align: center;
-	width: auto;
 	color: white;
-	box-shadow: 3px 1px 5px black;
+	font-size: 14px;
 }
 
 .res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
 	background: #0d47a1;
-	box-shadow: 7px 3px 10px black;
 }
 
 
@@ -432,6 +438,8 @@ body:before {
 .sitetable {
 	position: relative;
 	top: 95px;
+	border: 1px solid #EEEEEE;
+	border-radius: 5px;
 }
 
 .link {
@@ -541,6 +549,8 @@ body >.content .link .rank, .rank-spacer {
 	margin: 0px auto;
 	border-style: none;
 	text-align: center;
+	position: relative;
+	top: 35px;
 }
 
 .formtab:hover {
@@ -550,6 +560,8 @@ body >.content .link .rank, .rank-spacer {
 .formtabs-content {
 	font-size: 16px;
 	margin: 0px auto;
+	position: relative;
+	top: 35px;
 }
 
 .link-button {
@@ -566,8 +578,10 @@ body >.content .link .rank, .rank-spacer {
 	display: none;
 }
 
-h1, h2{
+.content h1, h2{
 	color: #d500f9;
+	position: relative;
+	top: 73px;
 }
 
 .roundfield {
@@ -598,14 +612,6 @@ h1, h2{
 /*NEED TO BE ORGANIZED*/
 
 @media screen and (max-width: 850px ) {
-	#search {
-		width: 200px;
-		right: 80px;
-	}
-	form # search {
-		width: 20px;
-		right: 80px;
-	}
 
 	#header .tabmenu {
 	left: 0px;
@@ -659,4 +665,34 @@ h1, h2{
 #subreddit_stylesheet span.btn.right {
 	right: -150px;
 	top: 1px;
+}
+
+/*****************8COMMENTS PAGE********************/
+.panestack-title {
+	position: relative;
+	top: 100px;
+}
+
+.markdownEditor-wrapper {
+	height: 146px;
+}
+
+.markdownEditor {
+	position: relative;
+	top: 120px;
+}
+
+.commentarea .menuarea {
+	position: relative;
+	top: 105px;
+}
+
+.commentingAs {
+	position: relative;
+	top: 64px;
+}
+
+.RESMacroDropdownTitle {
+	position: relative;
+	top: 64px;
 }
