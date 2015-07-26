@@ -1,5 +1,5 @@
 /*
-Version: 1.22
+Version: 1.23
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -7,18 +7,20 @@ Subreddit: /r/cleanUI;
 /*
 WHAT'S NEW?
 
+1) FIXED USERNAME SECTION WIDTH AND PLACEMENT
+2) FIXED ARROW STYLING FOR USERNAME
+
+*****************VERSION 1.22***********************
 7/24/2015
 1) FIXED SEARCH BAR STYLING
 2) FIXED SIDE BAR BUTTONS STYLING
 3) FIXED BUGS ON SUBMIT PAGE
 4) FIXED BUGS ON COMMENT PAGE
 
-
 *****************VERSION 1.21***********************
 7/20/2015
 1) MOVED USERNAME AND INFO TO REDDIT HEADER BAR
 2) CHANGED STYLING ON USERNAME AND INFO BAR
-
 
 *****************VERSION 1.2***********************
 7/19/2015
@@ -260,12 +262,12 @@ textarea {
 /* Objects from top to bottom */
 #header-bottom-right {
 	position: absolute;
-	margin: 2px 0 0 0;
+	right: 16px;
 	font-size: 1em;
 	top: 135px !important;
 	background-color: transparent;
-	width: 20%;
-	min-width: 448px;
+	width: 435px;
+	margin: 0;
 }
 
 #userbarToggle {
@@ -273,6 +275,7 @@ textarea {
 	color: black !important;
 	font-size: 2em !important;
 	padding: 0px;
+	border-right: none;
 }
 
 input[type="text"][name="q"]  {
