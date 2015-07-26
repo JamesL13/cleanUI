@@ -275,7 +275,7 @@ textarea {
 	color: black !important;
 	font-size: 2em !important;
 	padding: 0px;
-	border-right: none;
+	border-right: none !important;
 }
 
 input[type="text"][name="q"]  {
