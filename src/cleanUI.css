@@ -1,5 +1,5 @@
 /*
-Version: 1.24
+Version: 1.245
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -7,12 +7,17 @@ Subreddit: /r/cleanUI;
 /*
 WHAT'S NEW?
 
+1) CHANGED FONT POSSIBLY
+2) HEAVILY CHANGES COLOR SCHEME (STILL THINGS UNCHANGED)
+3) MADE HEADER BAR AND TOP LINK BAR HAVE SOME TRANSPARENCY
+4) CHANGED ORANGE COLORED TEXT TO WHITE OR BLACK 
+
+*****************VERSION 1.24***********************
 1) FIXED BUGS ON TOP SORTING
 2) FIXED BUGS ON EDITING THE STYLESHEET PAGE
 3) FIXED ARROW WIDTH ON MIDCOL SECTION
 
-
-*****************VERSION 1.22***********************
+*****************VERSION 1.23***********************
 1) FIXED USERNAME SECTION WIDTH AND PLACEMENT
 2) FIXED ARROW STYLING FOR USERNAME
 
@@ -45,6 +50,10 @@ WHAT'S NEW?
 4) MODIFIED BODY AND TABS TO BE MORE MOBILE FRIENDLY
 */
 
+html {
+	font-family:"Segoe UI",Arial,Sans-Serif;
+}
+
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box; 
@@ -65,7 +74,7 @@ body {
 /*********************************************************************/
 /* General */
 a {
-	color: #FF8F32;
+	color: white;
 	transition: color 0.15s ease;
 	font-weight: bold;
 }
@@ -107,30 +116,40 @@ textarea {
 
 #header-bottom-left {
 	position: absolute;
-	top: 118px !important;
+	top: 113px !important;
+	opacity: .8;
+	box-shadow: none;
 }
 
 #sr-header-area {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR YOUR BANNER
 	*******************************************************************/
-	background-color: #2196F3;
+	background-color: #4F5B66;
+	color: white;
 	border: 0px solid;
 	height: 24px;
 	line-height: 23px;
+	opacity: .8;
+}
+
+.sr-bar a {
+	color: white;
 }
 
 #header-img.default-header, #header-img {
 	z-index: 99;
-	width: 115px;
-	padding-left: 48px;
-	height: 46px;
+	left: 30px;
+	top: 5px;
+	font-size: 30px;
 	/*******************************************************************
 	EDIT YOUR SPRITE HERE FOR THE REDDIT LOGO
 	*******************************************************************/
-	background-image: url(%%spritesheet2%%) 93px -100px;
+	/*background-image: url(%%spritesheet2%%) 93px -100px;*/
+	color: white;
+	content: "<<";
 	background-color: transparent;
-	position: relative;
+	position: absolute;
 	margin: 0;
 }
 
@@ -140,13 +159,13 @@ textarea {
 
 #header .pagename a {
 	display: inline-block;
-	color: #FF8F32;
+	color: white;
 	font-size: 22px;
 	padding: 11px;
 	font-weight: bold;
 	position: relative;
 	top: 10px;
-	font-family: Roboto;
+	font-family: Segoe UI;
 	margin: 0 4px;
 	vertical-align: top;
 	transition: background-color 0.25s ease;
@@ -173,8 +192,8 @@ textarea {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR WHERE THE USERNAME IS
 	*******************************************************************/
-	background-color: #2196F3;
-	box-shadow: 3px 1px 5px black;
+	background-color: #4F5B66;
+	color: white;
 }
 
 #header .tabmenu {
@@ -205,9 +224,9 @@ textarea {
 }
 
 #header .tabmenu {
-	background: #2196F3;
+	background: #4F5B66;
 	border: 1px black;
-	top: 0px;
+	top: 23px;
 	left: 0px;
 	margin: 0px;
 	border-radius: 10px;
@@ -219,7 +238,7 @@ textarea {
 }
 
 #header .tabmenu li a:hover {
-	background-color: #1976D2;
+	background-color: #343d46;
 }
 
 #header .tabmenu li.selected a {
@@ -235,7 +254,7 @@ textarea {
 }
 
 #header .tabmenu li.selected a:hover {
-	background-color: #64B5F6;
+	background-color: #343d46;
 }
 
 .listing-page .tabmenu li > a[href$="/rising/"], .wiki-page .tabmenu li > a[href$="/rising/"],
@@ -268,6 +287,7 @@ textarea {
 /* Objects from top to bottom */
 #header-bottom-right {
 	position: absolute;
+	color: white;
 	right: 16px;
 	font-size: 1em;
 	top: 135px !important;
@@ -278,7 +298,7 @@ textarea {
 
 #userbarToggle {
 	background: transparent !important;
-	color: black !important;
+	color: white !important;
 	font-size: 2em !important;
 	padding: 0px;
 	border-right: none !important;
@@ -309,7 +329,8 @@ input[type="submit"] {
   /*******************************************************************
 	EDIT BACKGROUND COLOR FOR SUBMIT NEW CONTENT BUTTONS
   *******************************************************************/
-  background: #18ffff;
+  background: #4F5B66;
+  color: white;
   right: 16px;
   cursor: pointer;
   border-radius: 3px;
@@ -318,8 +339,12 @@ input[type="submit"] {
   font-size: 14px;
   }
 
+  .morelink a {
+  	color: white;
+  }
+
 .morelink:hover {
-	background: #00b8d4; 
+	background: #343d46; 
 }
 
 .morelink:active {
@@ -337,13 +362,13 @@ input[type="submit"] {
 }
 
 .disabled .morelink a {
-	color: #4d5763;
+	color: white;
 }
 
 .disabled .morelink:after {
 	content: "You must be approved by the moderators in order to submit.";
 	background-color: #CFCFCF;
-	color: #4d5763;
+	color: white;
 }
 
 
@@ -361,9 +386,10 @@ input[type="submit"] {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR SUBSCRIBE BUTTON
 	*******************************************************************/
-	background-color: #51A3E8;
+	background-color: #4F5B66;
+	background-image: none;
+	color: white;
 	border: 0px solid;
-	background: #f44336;
 	outline: none !important;
 	font-size: 12px;
 	text-align: center;
@@ -371,7 +397,7 @@ input[type="submit"] {
 }
 
 .titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .remove:hover {
-	background: #d50000;
+	background: #343d46;
 }
 
 .res .RESshortcutside, .res .RESDashboardToggle {
@@ -379,10 +405,10 @@ input[type="submit"] {
 	/*******************************************************************
 	EDIT BACKGROUND COLOR FOR RES SHORTCUT BUTTONS
 	*******************************************************************/
-	background: #1e88e5;
+	background: #4F5B66;
 	display: block;
 	border: none;
-	color: #4D5763;
+	color: white;
 	width: 300px;
 	height: 20px;
 	right: 16px;
@@ -396,7 +422,7 @@ input[type="submit"] {
 }
 
 .res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
-	background: #0d47a1;
+	background: #343d46;
 }
 
 
@@ -490,11 +516,9 @@ body >.content .link .rank, .rank-spacer {
 	EDIT YOUR SPRITE HERE FOR THE ARROW
 	*******************************************************************/
 	background-image: url(%%spritesheet%%) !important;
-	/*background-color: red;*/
 	width: 33px;
 	height: 100px;
 	border-radius: 2px;
-	transition: background-color 0.25s ease;
 }
 
 .arrow:hover {
@@ -512,7 +536,6 @@ body >.content .link .rank, .rank-spacer {
 	height: 20px;
 	background-position: -128px 0px;
 	position: relative;
-	background-color: blue;
 }
 
 .arrow.upmod:focus:after {
@@ -539,12 +562,11 @@ body >.content .link .rank, .rank-spacer {
 .arrow.downmod {
 	height: 20px;
 	background-position: -224px 0px;
-	background-color: red;
 }
 
 .arrow.down:hover:after {
 	visibility: visible;
-	background-color: rgba(79, 77, 192, 0.9);
+	background-color: red;
 	color: #FFF;
 	margin-left: 48px;
 }
@@ -713,4 +735,24 @@ body >.content .link .rank, .rank-spacer {
 
 .gadget .midcol {
 	width: auto;
+}
+
+.icon-menu a {
+	color: black;
+}
+
+a .choice {
+	color: black;
+}
+
+#srLeftContainer, #RESStaticShortcuts, #RESShortcuts, #srDropdown {
+	color: white;
+}
+
+a .subbarlink {
+	color: white;
+}
+
+.footer a {
+	color: black;
 }
