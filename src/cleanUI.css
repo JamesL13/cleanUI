@@ -1,5 +1,5 @@
 /*
-Version: 1.245
+Version: 1.3
 Created by James Landy
 Subreddit: /r/cleanUI;
 */
@@ -7,11 +7,16 @@ Subreddit: /r/cleanUI;
 /*
 WHAT'S NEW?
 
-1) CHANGED FONT POSSIBLY
+1) CHANGED FONT
 2) HEAVILY CHANGES COLOR SCHEME (STILL THINGS UNCHANGED)
 3) MADE HEADER BAR AND TOP LINK BAR HAVE SOME TRANSPARENCY
 4) CHANGED ORANGE COLORED TEXT TO WHITE OR BLACK 
 5) FIXED ARROW BACKGROUND COLOR TO BE NONE
+6) FIXED PADDING IN ENTRYS TO BE INLINE WITH THE ARROWS
+7) MOVED USERBAR HEADER TO BE ALL THE WAY TO THE RIGHT
+8) MOVED OPEN ARROW TO ALL THE WAY TO THE RIGHT WHEN USERBAR IS HIDDEN
+9) CLEANED UP SUBMIT LINK/TEXT PAGE
+10) RESTYLED SUBMIT LINK/TEXT PAGE
 
 *****************VERSION 1.24***********************
 1) FIXED BUGS ON TOP SORTING
@@ -68,7 +73,7 @@ body {
 	*******************************************************************/
 	background-color: white;
 	min-width: 850px;
-}
+	font-family:"Segoe UI",Arial,Sans-Serif}
 
 
 
@@ -166,7 +171,7 @@ textarea {
 	font-weight: bold;
 	position: relative;
 	top: 10px;
-	font-family: Segoe UI;
+	font-family:"Segoe UI",Arial,Sans-Serif;
 	margin: 0 4px;
 	vertical-align: top;
 	transition: background-color 0.25s ease;
@@ -220,7 +225,7 @@ textarea {
 	text-transform: uppercase;
 	font-weight: normal;
 	font-size: 14px;
-	font-family: Roboto, sans-serif;
+	/*font-family: Roboto, sans-serif;*/
 	transition: color 0.25s ease, background-color 0.5s ease;
 }
 
@@ -231,7 +236,7 @@ textarea {
 	left: 0px;
 	margin: 0px;
 	border-radius: 10px;
-	height: 1500px;
+	height: 1400px;
 }
 
 #header .tabmenu li a {
@@ -293,8 +298,9 @@ textarea {
 	font-size: 1em;
 	top: 135px !important;
 	background-color: transparent;
-	width: 435px;
+	width: 368px;
 	margin: 0;
+	display: inline-block;
 }
 
 #userbarToggle {
@@ -303,6 +309,12 @@ textarea {
 	font-size: 2em !important;
 	padding: 0px;
 	border-right: none !important;
+	display: inline-block;
+}
+
+.userbarShow {
+	right: 0;
+	left: auto !important;
 }
 
 input[type="text"][name="q"]  {
@@ -349,7 +361,7 @@ input[type="submit"] {
 }
 
 .morelink:active {
-	background-color: #00b8d4;
+	background-color: #343d46;
 }
 
 .nub {
@@ -473,9 +485,18 @@ body:before {
 
 .sitetable {
 	position: relative;
-	top: 95px;
+	top: 80px;
 	border: 1px solid #EEEEEE;
 	border-radius: 5px;
+	left: -50px;
+	width: 104%;
+}
+
+@media only screen and (max-width: 850px) {
+	.sitetable {
+		width: 100%;
+		left: -2px;
+	}
 }
 
 .link {
@@ -583,26 +604,46 @@ body >.content .link .rank, .rank-spacer {
 	text-align: center;
 	position: relative;
 	top: 35px;
+	background-color: #4f5b66;
+	width: 50%;
+	top: 64px;
 }
 
 .formtab:hover {
 
 }
 
+form .submit .content {
+	border: solid 1px silver;
+	position: relative;
+	top: 40px;
+	background-color: purple;
+}
+
 .formtabs-content {
 	font-size: 16px;
 	margin: 0px auto;
 	position: relative;
-	top: 35px;
+	top: 40px;
+	border-top: none;
 }
 
-.link-button {
+.tabmenu.formtab .selected a {
 	margin: 0px auto;
+	background-color:transparent; 
+	border: none;
+}
+
+.tabmenu.formtab  a {
+	background-color: transparent;
+	border: none;
 }
 
 .infobar {
-	background: #2196F3;
-	border-style: none;
+	background: white;
+	border-style: solid 1px silver;
+	position: relative;
+	top: 18px;
 	font-weight: bold;
 }
 
@@ -611,9 +652,7 @@ body >.content .link .rank, .rank-spacer {
 }
 
 .content h1, h2{
-	color: #d500f9;
-	position: relative;
-	top: 73px;
+	display: none;
 }
 
 .roundfield {
@@ -621,24 +660,51 @@ body >.content .link .rank, .rank-spacer {
 	margin: 0px auto;
 }
 
+.roundfield #title-field {
+	border: solid 1px silver;
+	position: relative;
+	top: 10px;
+}
+
+.roundfield #url-field {
+	border: solid 1px silver;
+}
+
+form button {
+	background-color: #4f5b66;
+	box-shadow: none;
+}
+
 #suggested-reddits {
 	display: none;
 }
 
+.roundfield-content {
+	top: -10px;
+	position: relative;
+}
+
+.info-notice {
+	background: silver;
+	border: none;
+}
+
 .submit-page #newlink.submit.content .btn {
-	width: 100%;
+	width: 200px;
 	padding: 6px;
 	height: 42px;
 	margin: 0px auto !important;
-	box-shadow: 3px 1px 5px black;
 	cursor: pointer;
 	font-size: 16px;
 	text-transform: uppercase;
+	background-color: #4f5b66;
+	color: white;
+	position: relative;
+	left: 55%;
 }
 
 .submit-page #newlink.submit.content .btn:hover {
-	box-shadow: 7px 3px 10px black;
-	background: #00b8d4;
+	background: #343d46;
 }
 
 /*NEED TO BE ORGANIZED*/
@@ -756,4 +822,26 @@ a .subbarlink {
 
 .footer a {
 	color: black;
+}
+
+.leavemoderator a {
+	color: black;
+}
+
+.togglebutton {
+	color: black;
+}
+
+.author {
+	color: black;
+}
+
+.prettyform {
+	position: absolute;
+	top: 175px;
+}
+
+.entry {
+	position: relative;
+	top: 15px;
 }
