@@ -17,6 +17,8 @@ WHAT'S NEW?
 8) MOVED OPEN ARROW TO ALL THE WAY TO THE RIGHT WHEN USERBAR IS HIDDEN
 9) CLEANED UP SUBMIT LINK/TEXT PAGE
 10) RESTYLED SUBMIT LINK/TEXT PAGE
+11) STYLED SUBSCRIBE BUTTON
+12) CHANGED HEADER IMAGE TO NEW COLOR DESIGN
 
 *****************VERSION 1.24***********************
 1) FIXED BUGS ON TOP SORTING
@@ -97,12 +99,11 @@ a {
 	width: 200px;
 	color: black;
 	margin: 0px auto;
-	box-shadow: 3px 1px 5px black;
+	color: white;
 }
 
 .btn:hover, button:hover {
-	background: #00b8d4;
-  	box-shadow: 7px 3px 10px black;
+	background: #343d46;
 }
 
 textarea {
@@ -204,7 +205,7 @@ textarea {
 
 #header .tabmenu {
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	left: 10px;
 	margin: 0px;
 }
@@ -232,7 +233,7 @@ textarea {
 #header .tabmenu {
 	background: #4F5B66;
 	border: 1px black;
-	top: 23px;
+	top: 40px;
 	left: 0px;
 	margin: 0px;
 	border-radius: 10px;
@@ -390,7 +391,7 @@ input[type="submit"] {
 	position: relative;
 }
 
-.titlebox .fancy-toggle-button .option .add, .titlebox .fancy-toggle-button .remove {
+.fancy-toggle-button .add {
 	position: relative;
 	right: 16px;
 	border-radius: 0px;
@@ -407,6 +408,26 @@ input[type="submit"] {
 	font-size: 12px;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.titlebox .fancy-toggle-button .option .add, .titlebox .fancy-toggle-button .remove {
+	position: relative;
+	right: 16px;
+	border-radius: 0px;
+	width: 300px;
+	display: block;
+	/*******************************************************************
+	EDIT BACKGROUND COLOR FOR UNSUBSCRIBE BUTTON
+	*******************************************************************/
+	background-color: #4F5B66;
+	background-image: none;
+	color: white;
+	border: 0px solid;
+	outline: none !important;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 2px;
 }
 
 .titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .remove:hover {
@@ -466,7 +487,7 @@ body:before {
 	AND UNCOMMENT BACKGROUND COLOR
 	*******************************************************************/
 	/*background-color: #616161;*/
-	background-image: url(%%CleanUIHeaderImage%%);
+	background-image: url(%%CleanUIHeaderImage2%%);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -596,7 +617,7 @@ body >.content .link .rank, .rank-spacer {
 /***********************************************************************/
 
 /*Submit Page*/
-.tabmenu{
+form .tabmenu{
 	font-size: 25px !important;
 	text-transform: uppercase;
 	margin: 0px auto;
@@ -641,7 +662,8 @@ form .submit .content {
 
 .infobar {
 	background: white;
-	border-style: solid 1px silver;
+	border: solid 1px silver;
+	border-radius: 5px;
 	position: relative;
 	top: 18px;
 	font-weight: bold;
@@ -658,6 +680,9 @@ form .submit .content {
 .roundfield {
 	background: transparent;
 	margin: 0px auto;
+	margin-top: 25px;
+	border: solid 1px silver;
+	border-radius: 5px;
 }
 
 .roundfield #title-field {
@@ -666,8 +691,12 @@ form .submit .content {
 	top: 10px;
 }
 
-.roundfield #url-field {
-	border: solid 1px silver;
+.roundfield textarea {
+	width: 480px;
+}
+
+.roundfield input[type=url] {
+	width: 480px;
 }
 
 form button {
@@ -772,7 +801,7 @@ form button {
 }
 
 .markdownEditor-wrapper {
-	height: 146px;
+	height: 55px;
 }
 
 .markdownEditor {
@@ -844,4 +873,29 @@ a .subbarlink {
 .entry {
 	position: relative;
 	top: 15px;
+}
+
+.content.submit .info-notice {
+	margin-top: 30px;
+	background-color: silver;
+	border: none;
+	margin-bottom: 0px;
+}
+
+.RESMacroDropdownTitle {
+	top: -35px;
+}
+
+.commentingAs {
+	top: -25px;
+}
+
+.markdownEditor {
+	top: 25px;
+	left: -11px;
+}
+
+#newLink textarea {
+	position: relative;
+	top: -90px;
 }
